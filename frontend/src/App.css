@@ -1,16 +1,40 @@
 .App {
   text-align: center;
+  background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5) );
+  background-repeat: no-repeat; 
+  background-size: cover;
+  height: 150vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App h1 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-top: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.title {
+  font-size: 4vw;
+  padding-top: 10px;
+  color: black;
+}
+
+.navBar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navBar li {
+  display: inline;
+  padding: 8px;
+  background-color: #dddddd;
+}
+
+li:hover {
+  background-color: #111;
+}
+
+.homePage {
+  padding-top: 50px;
 }
 
 .App-header {
@@ -24,15 +48,30 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.aboutPage {
+  width: 75%;
+  margin: 0 auto;
+  margin-top: 25px;
+  font-size: 1.3vw;
+  font-weight: bold;
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.aboutPage h1 {
+  border-bottom: 4px white solid;
+  font-size: 5vh;
+}
+
+.servicesPage {
+  width: 75%;
+  margin: 0 auto;
+  margin-top: 50px;
+  font-size: 1.3vw;
+  font-weight: bold;
+  color: white;
+}
+
+.servicesPage h1 {
+  border-bottom: 4px white solid;
+  font-size: 5vh;
 }
