@@ -8,8 +8,10 @@ import About from './components/About'
 import Services from './components/Services'
 
 function App() {
+
+  const services = ['Oil Change', 'Tire Rotations', 'Brakes', 'Headlights & Tail Lights', 'Check Engine Light']
+
   return (
-    
     <div className="App">
       <Router>
         <header>
@@ -41,7 +43,7 @@ function App() {
           <Routes>
             <Route path="/" Component={Home} />
             <Route path="/about" Component={About} />
-            <Route path="/services" Component={Services} />
+            <Route path="/services" render={() => <Services services={services}/>} />
           </Routes>
         </div>
 

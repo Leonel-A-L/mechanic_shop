@@ -1,9 +1,15 @@
-export default function Services () {
+export default function Services(props) {
+  const displayServices = props.services.map((eachService) => <li>{eachService}</li>)
+
   return (
-    <div className="servicesPage">
-      <div className="servicesHeader">
-        <h1>Services</h1>
-        <h2>Explore around for services you need with great & affordable prices!</h2>
+    <div>
+      <div className="servicesPage">
+        <div className="servicesHeader">
+          <h1>Services</h1>
+        </div>
+        <ul>
+          {displayServices}
+        </ul>
       </div>
     </div>
   )
