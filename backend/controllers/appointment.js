@@ -10,6 +10,7 @@ const {
     isInBuisnessDay,
     createAvailableSpots,
     
+    
 } = require('../controllers/mechanic')
 
 async function getAllAppointment(req, res) {
@@ -43,32 +44,50 @@ async function getAppointmentById(req, res) {
     }
 }
 
-// still wroking on Route
-async function createAppointment(req, res) {
-    //  const existingAppointment = await Appointment.find(req.query.mechanic,req.query.appointmentDate, req.query.appointmentTime)
-    // const searchMechanic = await Appointment.find(req.query.mechanic)
-    // console.log('Existing', existingAppointment,'Mechanic', searchMechanic)
-    const existingMechanicAppointment = await (await Appointment.find().where('mechanic').equals(req.body.mechanic)).sort()
-    const { mechanic, appointmentDate, appointmentTime } = req.body     
-    const checkNewAppointment = { mechanic, appointmentDate, appointmentTime }    
-    console.log('TEST', existingMechanicAppointment, 'Hopefully', checkNewAppointment)
-      
+
+
+async function createAppointment(req, res) {   
+
+    const { customer, mechanic, appointmentDate, appointmentTime } = req.body
+    
+    const inBuisnessDay = await isInBuisnessDay(new Date(appointmentDate)) // working on it
+    console.log('appointment date',inBuisnessDay)
    
+    const currentDate = new Date().getTime()    
+    const appointmentDateRequested = new Date(appointmentDate)    
+    const futureDate = new Date(currentDate + 36500000000) 
+    const pastDate = new Date(currentDate - 1000000)    
+
+     const time = appointmentTime
+     const beforeBuisnessOpen = time < 8
+     const afterBuisnessClose = time > 16
+ 
+    
+
+    const existingMechanicAppointment =await Appointment.find({ mechanic, appointmentDate, appointmentTime })
+    console.log('mechanic appointment', existingMechanicAppointment)
+    
+    if(appointmentDateRequested <= pastDate || appointmentDateRequested > futureDate || inBuisnessDay == false || beforeBuisnessOpen || afterBuisnessClose){
+        res.json({ 'message': 'error wrong time' })
+        return
+    }else{
+
+        if (existingMechanicAppointment.length ){
+            res.json({ 'message': 'error creating appointment; an appointment already exists' })
+            return
+        }    
+    }
+    
      
     try {          
-        // if(existingMechanicAppointment.mechanic == checkNewAppointment.mechanic){res.status(400).json({'message': 'appointment already created'})}
-        // else{
-        if (!req.body.image) req.body.image = undefined
-        const appointment = await new Appointment(req.body)
-        const id = appointment.id        
-        res.status(201).json({ 'message': 'appointment created',id })
-        }catch (error) {
-        console.log('error creating appointment:', error)
+        const appointment = new Appointment({ customer, mechanic, appointmentDate, appointmentTime })
+        await appointment
+        res.status(201).json({ 'message': 'appointment created', id: appointment.id})
+         
+        }catch (error) {      
         res.json({ 'message': 'error creating appointment' })
-    }
+    }    
 }
-
-
 
 async function updateAppointmentById(req, res) {
     console.log(req.body)
