@@ -26,8 +26,8 @@ async function getMechanicById(req, res) {
 }
 
 function isInBuisnessDay(date){   
-    const weekDay = date.getDay()
-    return 1 <= weekDay && weekDay <= 5     
+    const weekDay = date.getDay()    
+    return 0 <= weekDay && weekDay <= 4     
 }
 
 const startHour = 8 //8am
