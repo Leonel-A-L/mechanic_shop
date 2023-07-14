@@ -11,6 +11,7 @@ import Brakes from './components/Brakes';
 import CheckEngineLight from './components/CheckEngineLight';
 import HeadTailLights from './components/HeadTailLights';
 import WindShieldWipers from './components/WindshieldWipers';
+import CreateAppointment from './components/CreateAppointment';
 
 function App() {
 
@@ -37,6 +38,11 @@ function App() {
                   Services
                 </Nav.Link>
               </Nav.Item>
+              <Nav.Item>
+                <Nav.Link as={Link} to="/createappointment" eventKey={"appointmentPage"}>
+                  Create Appointment
+                </Nav.Link>
+              </Nav.Item>
             </Nav>
           </Container>
 
@@ -46,6 +52,7 @@ function App() {
           <Routes>
             <Route path="/" Component={Home} />
             <Route path="/about" Component={About} />
+            <Route path="/createappointment" Component={CreateAppointment}/>
             <Route path="/services" Component={Services}/>
             <Route path="/services/oilchange" Component={OilChange}/>
             <Route path="/services/brakes" Component={Brakes} />

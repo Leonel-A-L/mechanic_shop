@@ -75,3 +75,13 @@ li:hover {
   border-bottom: 4px white solid;
   font-size: 5vh;
 }
+
+.appointmentForm {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.submitButton {
+  margin-top: 7vh;
+}
