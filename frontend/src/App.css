@@ -23,14 +23,39 @@
   padding: 0;
 }
 
-.navBar li {
+.navBar li:hover {
   display: inline;
   padding: 8px;
   background-color: #dddddd;
 }
 
+ul {
+  color: white;
+}
+
 li:hover {
   background-color: #111;
+}
+
+li {
+  list-style: none;
+  font-size: 20px;
+  margin-right: 33px;
+  margin-top: 30px;
+  color: white;
+}
+
+a:link {
+  text-decoration: none;
+  color: white;
+}
+
+a:visited {
+  color:rgb(46, 105, 213)
+}
+
+a:hover {
+  color: rgb(38, 209, 38);
 }
 
 .homePage {
@@ -51,7 +76,7 @@ li:hover {
 .aboutPage {
   width: 75%;
   margin: 0 auto;
-  margin-top: 25px;
+  margin-top: 30px;
   font-size: 1.3vw;
   font-weight: bold;
   color: white;
@@ -65,7 +90,7 @@ li:hover {
 .servicesPage {
   width: 75%;
   margin: 0 auto;
-  margin-top: 50px;
+  margin-top: 30px;
   font-size: 1.3vw;
   font-weight: bold;
   color: white;
@@ -80,8 +105,18 @@ li:hover {
   display: grid;
   align-items: center;
   justify-content: center;
+  margin-top: 3vh;
 }
 
 .submitButton {
   margin-top: 7vh;
+}
+
+.mechanicsPage h1 {
+  border-bottom: 4px white solid;
+  font-size: 5vh;
+  color: white;
+  margin: 0 auto;
+  width: 75%;
+  margin-top: 30px;
 }

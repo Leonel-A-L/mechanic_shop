@@ -6,12 +6,17 @@ import './App.css';
 import Home from './components/Home';
 import About from './components/About';
 import Services from './components/Services';
+import Mechanics from './components/Mechanics';
 import OilChange from './components/OilChange';
 import Brakes from './components/Brakes';
 import CheckEngineLight from './components/CheckEngineLight';
 import HeadTailLights from './components/HeadTailLights';
 import WindShieldWipers from './components/WindshieldWipers';
 import CreateAppointment from './components/CreateAppointment';
+import Archie from './components/Archie';
+import Gerard from './components/Gerard';
+import Abel from './components/Abel';
+import Fraser from './components/Fraser';
 
 function App() {
 
@@ -39,6 +44,11 @@ function App() {
                 </Nav.Link>
               </Nav.Item>
               <Nav.Item>
+                <Nav.Link as={Link} to="/mechanics" eventKey={"mechanicsPage"}>
+                  Mechanics
+                </Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
                 <Nav.Link as={Link} to="/createappointment" eventKey={"appointmentPage"}>
                   Create Appointment
                 </Nav.Link>
@@ -53,6 +63,11 @@ function App() {
             <Route path="/" Component={Home} />
             <Route path="/about" Component={About} />
             <Route path="/createappointment" Component={CreateAppointment}/>
+            <Route path="/mechanics" Component={Mechanics}/>
+            <Route path="/mechanics/archie" Component={Archie}/>
+            <Route path="/mechanics/gerard" Component={Gerard}/>
+            <Route path="/mechanics/abel" Component={Abel}/>
+            <Route path="/mechanics/fraser" Component={Fraser}/>
             <Route path="/services" Component={Services}/>
             <Route path="/services/oilchange" Component={OilChange}/>
             <Route path="/services/brakes" Component={Brakes} />
