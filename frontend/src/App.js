@@ -17,6 +17,7 @@ import Archie from './components/Archie';
 import Gerard from './components/Gerard';
 import Abel from './components/Abel';
 import Fraser from './components/Fraser';
+import Reviews from './components/Reviews';
 
 function App() {
 
@@ -53,6 +54,11 @@ function App() {
                   Create Appointment
                 </Nav.Link>
               </Nav.Item>
+              <Nav.Item>
+                <Nav.Link as={Link} to="/reviews" eventKey={"reviewsPage"}>
+                  Reviews
+                </Nav.Link>
+              </Nav.Item>
             </Nav>
           </Container>
 
@@ -63,6 +69,7 @@ function App() {
             <Route path="/" Component={Home} />
             <Route path="/about" Component={About} />
             <Route path="/createappointment" Component={CreateAppointment}/>
+            <Route path="/reviews" Component={Reviews}/>
             <Route path="/mechanics" Component={Mechanics}/>
             <Route path="/mechanics/archie" Component={Archie}/>
             <Route path="/mechanics/gerard" Component={Gerard}/>

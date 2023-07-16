@@ -1,7 +1,7 @@
 export default function Home () {
   return (
     <div className="homePage">
-      <h1>Mechanic Shop LLC</h1>
+      <h1>Welcome to Mechanic Shop! Browse around and book an appointment with us today!</h1>
     </div>
   )
 }

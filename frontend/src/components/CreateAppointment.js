@@ -1,6 +1,11 @@
 export default function CreateAppointment() {
   return (
-    <div>
+    <div className="appointmentPage">
+      <div className="appointmentHeader">
+        <h1>
+          Create Appointment
+        </h1>
+      </div>
       <div>
         <form className="appointmentForm">
           <label for="firstName">First Name:</label>

@@ -120,3 +120,21 @@ a:hover {
   width: 75%;
   margin-top: 30px;
 }
+
+.appointmentPage h1 {
+  border-bottom: 4px white solid;
+  font-size: 5vh;
+  color: white;
+  margin: 0 auto;
+  width: 75%;
+  margin-top: 30px;
+}
+
+.reviewsPage h1 {
+  border-bottom: 4px white solid;
+  font-size: 5vh;
+  color: white;
+  margin: 0 auto;
+  width: 75%;
+  margin-top: 30px;
+}
