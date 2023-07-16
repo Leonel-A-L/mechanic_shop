@@ -1,6 +1,6 @@
 const Customer = require("../models/Customer");
 
-// Gets all customers
+//Get all customers
 async function getAllCustomer(req, res) {
   try {
     const customers = await Customer.find();
@@ -10,7 +10,7 @@ async function getAllCustomer(req, res) {
   }
 }
 
-// Gets customer by the ID
+//Gets customer by the ID
 async function getCustomerById(req, res) {
   try {
     const { id } = req.params;
@@ -21,19 +21,42 @@ async function getCustomerById(req, res) {
     res.json({ message: "error fetching customer" });
   }
 }
-
 // Creates the customers
 async function createCustomer(req, res) {
+  const { firstName, lastName, email, phoneNumber } = req.body;
+  const existingUser = await Customer.find({
+    firstName,
+    lastName,
+    email,
+    phoneNumber,
+  });
+
+  if (existingUser.length) {
+    res.json({ message: "error user already exists" });
+    return;
+  }
+
   try {
-    if (!req.body.image) req.body.image = undefined;
-    const customer = await new Customer(req.body).save();
-    const id = customer.id;
-    res.status(201).json({ message: "customer created", id });
+    const customer = new Customer({ firstName, lastName, email, phoneNumber });
+    await customer.save();
+    res.status(201).json({ message: "customer created", id: customer.id });
   } catch (error) {
     res.json({ message: "error creating customer" });
   }
 }
-// Updates customer by the ID
+
+// Customer log in
+async function userLogin(req, res) {
+  const { email, phoneNumber } = req.body;
+  const existingUser = await Customer.find({ email, phoneNumber });
+
+  if (!existingUser.length) {
+    res.json({ message: "wrong email or phone number" });
+  } else {
+    res.json({ message: "user loged in" });
+  }
+}
+// Updates the customer by ID
 async function updateCustomerById(req, res) {
   try {
     const { id } = req.params;
@@ -45,7 +68,7 @@ async function updateCustomerById(req, res) {
   }
 }
 
-// Deletes customer by the ID
+// Delete the customer by the ID
 async function deleteCustomerById(req, res) {
   try {
     const { id } = req.params;
@@ -62,4 +85,5 @@ module.exports = {
   createCustomer,
   deleteCustomerById,
   updateCustomerById,
+  userLogin,
 };
