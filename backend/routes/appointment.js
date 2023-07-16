@@ -13,7 +13,7 @@ router.get("/", getAllAppointment);
 router.get("/:id", getAppointmentById);
 
 //POST / creat appointment
-router.post("/", createAppointment);
+router.post("/createappointment", createAppointment);
 
 // PUT /:id update
 router.put("/:id", updateAppointmentById);

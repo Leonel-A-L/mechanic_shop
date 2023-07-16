@@ -85,5 +85,4 @@ module.exports = {
   createCustomer,
   deleteCustomerById,
   updateCustomerById,
-  userLogin,
 };
