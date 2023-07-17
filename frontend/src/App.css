@@ -1,16 +1,65 @@
 .App {
   text-align: center;
+  background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5) );
+  background-repeat: no-repeat; 
+  background-size: cover;
+  height: 150vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App h1 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-top: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.title {
+  font-size: 4vw;
+  padding-top: 10px;
+  color: black;
+}
+
+.navBar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navBar li:hover {
+  display: inline;
+  padding: 8px;
+  background-color: #dddddd;
+}
+
+ul {
+  color: white;
+}
+
+li:hover {
+  background-color: #111;
+}
+
+li {
+  list-style: none;
+  font-size: 20px;
+  margin-right: 33px;
+  margin-top: 30px;
+  color: white;
+}
+
+a:link {
+  text-decoration: none;
+  color: white;
+}
+
+a:visited {
+  color:rgb(46, 105, 213)
+}
+
+a:hover {
+  color: rgb(38, 209, 38);
+}
+
+.homePage {
+  padding-top: 50px;
 }
 
 .App-header {
@@ -24,15 +73,87 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.aboutPage {
+  width: 75%;
+  margin: 0 auto;
+  margin-top: 30px;
+  font-size: 1.3vw;
+  font-weight: bold;
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.aboutPage h1 {
+  border-bottom: 4px white solid;
+  font-size: 5vh;
+}
+
+.servicesPage {
+  width: 75%;
+  margin: 0 auto;
+  margin-top: 30px;
+  font-size: 1.3vw;
+  font-weight: bold;
+  color: white;
+}
+
+.servicesPage h1 {
+  border-bottom: 4px white solid;
+  font-size: 5vh;
+}
+
+.appointmentForm {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3vh;
+}
+
+.submitButton {
+  margin-top: 7vh;
+}
+
+.mechanicsPage h1 {
+  border-bottom: 4px white solid;
+  font-size: 5vh;
+  color: white;
+  margin: 0 auto;
+  width: 75%;
+  margin-top: 30px;
+}
+
+.appointmentPage h1 {
+  border-bottom: 4px white solid;
+  font-size: 5vh;
+  color: white;
+  margin: 0 auto;
+  width: 75%;
+  margin-top: 30px;
+}
+
+.reviewsPage h1 {
+  border-bottom: 4px white solid;
+  font-size: 5vh;
+  color: white;
+  margin: 0 auto;
+  width: 75%;
+  margin-top: 30px;
+}
+
+.createAccountForm {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3vh;
+}
+
+.logInButton {
+  margin-left: 7px;
+}
+
+.logInLabel {
+  margin-right: 7px;
+}
+
+#emailLogIn {
+  margin-right: 7px;
 }
