@@ -308,3 +308,11 @@ a:hover {
   width: 23%;
   margin-top: 25px;
 }
+
+.checked {
+  color: gold;
+}
+
+.reviews {
+  margin-top: 30px;
+}
