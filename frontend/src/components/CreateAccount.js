@@ -5,6 +5,7 @@ export default function CreateAccount() {
         <h1>
           Create Account
         </h1>
+      </div>
         <div>
           <form className="createAccountForm">
             <label for="email">Email:</label>
@@ -13,8 +14,7 @@ export default function CreateAccount() {
             <input type="text" id="phoneNumber" name="phoneNumber"/>
             <button type="submit" className="submitButton">Create Account</button>
           </form>
-        </div>
-      </div>
+        </div>  
     </div>
   )
 }

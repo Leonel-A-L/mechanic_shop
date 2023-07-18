@@ -26,12 +26,15 @@ function App() {
     <div className="App">
       <Router>
         <header>
-          <h1 className="title">Welcome to Mechanic Shop LLC!</h1>
+          <div className="carShop">
+            <img src="https://cdn-icons-png.flaticon.com/512/3028/3028567.png" alt="Car Shop" id="carShop"/>
+          </div>
+          <h1 className="title">Welcome to Mechanic Shop!</h1>
           <form>
             <label for="logIn" className="logInLabel">Log In:</label>
-            <input type="email" placeholder="email" id="emailLogIn" name="emailLogIn"/>
+            <input type="email" placeholder="Email" id="emailLogIn" name="emailLogIn"/>
             <label for="logIn"></label>
-            <input type="tel" placeholder="telephone" id="telLogIn" name="telLogIn"/>
+            <input type="tel" placeholder="Phone Number" id="telLogIn" name="telLogIn"/>
             <button type="submit" className="logInButton">Log In</button>
           </form>
           <Container>

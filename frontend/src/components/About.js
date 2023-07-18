@@ -4,10 +4,13 @@ export default function About () {
       <div className="aboutHeader">
         <h1>About Us</h1>
       </div>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> 
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> 
-      <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p> 
-      <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p>We have been working on customer's vehicles since 2020.</p> 
+      <p>Our mechanics have a whopping average of 15+ years of experience!</p> 
+      <p>If you ever need any vehicular assistance, just know you can count on us!</p> 
+      <p>We're located at Anytown, NC.</p>
+      <div>
+        <img src="https://media.gettyimages.com/id/1312474660/photo/mature-car-mechanic-and-apprentice-at-work.jpg?s=612x612&w=gi&k=20&c=uCm7RB138hoZPfDvroDc909X7bBOK4nJPsGlTUMZoVg=" alt="mechanic's working" id="mechanicImg2"/>
+      </div>
     </div>
   )
 }
