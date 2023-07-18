@@ -23,6 +23,7 @@ async function getCustomerById(req, res) {
 }
 // Creates the customers
 async function createCustomer(req, res) {
+  console.log(req.body)
   const { firstName, lastName, email, phoneNumber } = req.body;
   const existingUser = await Customer.find({
     firstName,
