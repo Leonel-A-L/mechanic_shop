@@ -187,7 +187,7 @@ a:hover {
 }
 
 #mechanicImg2 {
-  width: 65%;
+  width: 50%;
   margin-top: 40px;
 }
 
@@ -267,4 +267,44 @@ a:hover {
 #checkEngineLightImg {
   width: 20%;
   margin-top: 20px;
+}
+
+.headTailLightsHeader {
+  border-bottom: 4px white solid;
+  font-size: 5vh;
+  color: white;
+  margin: 0 auto;
+  width: 75%;
+  margin-top: 30px;
+}
+
+.headTailLightPrices {
+  margin-top: 20px;
+  font-size: 30px;
+  color: white;
+}
+
+#headLightImg {
+  width: 23%;
+  margin-top: 25px;
+}
+
+.windshieldWiperHeader {
+  border-bottom: 4px white solid;
+  font-size: 5vh;
+  color: white;
+  margin: 0 auto;
+  width: 75%;
+  margin-top: 30px;
+}
+
+.windshieldWiperPrices {
+  margin-top: 20px;
+  font-size: 30px;
+  color: white;
+}
+
+#winshieldWiperRepairImg {
+  width: 23%;
+  margin-top: 25px;
 }

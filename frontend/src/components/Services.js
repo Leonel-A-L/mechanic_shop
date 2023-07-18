@@ -6,6 +6,7 @@ export default function Services() {
         <div className="servicesHeader">
           <h1>Services</h1>
         </div>
+        <p>Memberships are bought in person at the front desk. Ask receptionist for further details.</p>
         <div>
           <ul>
             <li>
